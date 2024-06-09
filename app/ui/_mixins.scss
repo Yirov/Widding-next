@@ -1,0 +1,67 @@
+$xs: 320px;
+$small: 480px;
+$medium: 768px;
+$large: 992px;
+$xl: 1024px;
+$xxl: 1440px;
+$xxxl: 1920px;
+
+@mixin breakpoint($size) {
+  @media (max-width: $size) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @include breakpoint($xs) {
+    @content;
+  }
+}
+
+/// Mixin - small Breakpoint
+/// Allows easier @include small {} syntax
+@mixin small {
+  @include breakpoint($small) {
+    @content;
+  }
+}
+
+/// Mixin - medium Breakpoint
+/// Allows easier @include medium {} syntax
+@mixin medium {
+  @include breakpoint($medium) {
+    @content;
+  }
+}
+
+/// Mixin - large Breakpoint
+/// Allows easier @include large {} syntax
+@mixin large {
+  @include breakpoint($large) {
+    @content;
+  }
+}
+
+/// Mixin - xl Breakpoint
+/// Allows easier @include xl {} syntax
+@mixin xl {
+  @include breakpoint($xl) {
+    @content;
+  }
+}
+
+/// Mixin - xxl Breakpoint
+/// Allows easier @include xxl {} syntax
+@mixin xxl {
+  @include breakpoint($xxl) {
+    @content;
+  }
+}
+
+/// Mixin - xxxl Breakpoint
+/// Allows easier @include xxxl {} syntax
+@mixin xxxl {
+  @include breakpoint($xxxl) {
+    @content;
+  }
+}
